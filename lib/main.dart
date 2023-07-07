@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:play_books/core/route/app_routes.dart';
+import 'package:play_books/core/themes/my_themes.dart';
 
 import 'core/app_init.dart';
+import 'core/route/routes.dart';
 
 void main() {
   appInit();
@@ -13,11 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-       title: 'Playbook Clone',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Home(),
+      title: 'Playbook Clone',
+      theme: myAppTheme.myAppTheme(),
+      initialRoute: Routes.splashScreen,
+      routes: AppRoutes.routes,
     );
   }
 }
